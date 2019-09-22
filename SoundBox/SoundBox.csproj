@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FD67DD7-BA06-40FF-A7A7-1F037139DD2A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SoundBox</RootNamespace>
+    <AssemblyName>SoundBox</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NAudio, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.9.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Lame, Version=1.0.9.26885, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.Lame.1.0.9\lib\net40\NAudio.Lame.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sounds\Aoe2\ageadvance.wav" />
+    <Content Include="Sounds\Aoe2\ageofkingsmenu.wav" />
+    <Content Include="Sounds\Aoe2\animalhunt.wav" />
+    <Content Include="Sounds\Aoe2\archeryrange.wav" />
+    <Content Include="Sounds\Aoe2\arrow1.wav" />
+    <Content Include="Sounds\Aoe2\arrow2.wav" />
+    <Content Include="Sounds\Aoe2\arrow3.wav" />
+    <Content Include="Sounds\Aoe2\arrow4.wav" />
+    <Content Include="Sounds\Aoe2\arrow5.wav" />
+    <Content Include="Sounds\Aoe2\arrow6.wav" />
+    <Content Include="Sounds\Aoe2\arrow7.wav" />
+    <Content Include="Sounds\Aoe2\attackwarning.wav" />
+    <Content Include="Sounds\Aoe2\attackwarning2.wav" />
+    <Content Include="Sounds\Aoe2\barracks.wav" />
+    <Content Include="Sounds\Aoe2\batteringramattack.wav" />
+    <Content Include="Sounds\Aoe2\batteringramhit1.wav" />
+    <Content Include="Sounds\Aoe2\batteringramhit2.wav" />
+    <Content Include="Sounds\Aoe2\batteringramhit3.wav" />
+    <Content Include="Sounds\Aoe2\bird.wav" />
+    <Content Include="Sounds\Aoe2\blacksmith.wav" />
+    <Content Include="Sounds\Aoe2\build1.wav" />
+    <Content Include="Sounds\Aoe2\build2.wav" />
+    <Content Include="Sounds\Aoe2\buildingdeath1.wav" />
+    <Content Include="Sounds\Aoe2\buildingdeath2.wav" />
+    <Content Include="Sounds\Aoe2\buildingdeath3.wav" />
+    <Content Include="Sounds\Aoe2\buildingdeath4.wav" />
+    <Content Include="Sounds\Aoe2\cameldeath1.wav" />
+    <Content Include="Sounds\Aoe2\cameldeath2.wav" />
+    <Content Include="Sounds\Aoe2\camelselect1.wav" />
+    <Content Include="Sounds\Aoe2\camelselect2.wav" />
+    <Content Include="Sounds\Aoe2\cannonfire1.wav" />
+    <Content Include="Sounds\Aoe2\cannonfire2.wav" />
+    <Content Include="Sounds\Aoe2\cannonfire3.wav" />
+    <Content Include="Sounds\Aoe2\cappedramhit1.wav" />
+    <Content Include="Sounds\Aoe2\cappedramhit2.wav" />
+    <Content Include="Sounds\Aoe2\cappedramhit3.wav" />
+    <Content Include="Sounds\Aoe2\castle.wav" />
+    <Content Include="Sounds\Aoe2\cavalryarchermove.wav" />
+    <Content Include="Sounds\Aoe2\cavalrydeath1.wav" />
+    <Content Include="Sounds\Aoe2\cavalrydeath2.wav" />
+    <Content Include="Sounds\Aoe2\cavalrydeath3.wav" />
+    <Content Include="Sounds\Aoe2\chat.wav" />
+    <Content Include="Sounds\Aoe2\cobrafire.wav" />
+    <Content Include="Sounds\Aoe2\cobramove.wav" />
+    <Content Include="Sounds\Aoe2\cobraselect.wav" />
+    <Content Include="Sounds\Aoe2\conquerersmenu.wav" />
+    <Content Include="Sounds\Aoe2\cricket.wav" />
+    <Content Include="Sounds\Aoe2\deerdeath.wav" />
+    <Content Include="Sounds\Aoe2\defeat.wav" />
+    <Content Include="Sounds\Aoe2\demolitionshipexplode1.wav" />
+    <Content Include="Sounds\Aoe2\demolitionshipexplode2.wav" />
+    <Content Include="Sounds\Aoe2\dock.wav" />
+    <Content Include="Sounds\Aoe2\donkey.wav" />
+    <Content Include="Sounds\Aoe2\elephantdeath.wav" />
+    <Content Include="Sounds\Aoe2\elephantflop.wav" />
+    <Content Include="Sounds\Aoe2\elephantmove.wav" />
+    <Content Include="Sounds\Aoe2\enemyconvertsuccess.wav" />
+    <Content Include="Sounds\Aoe2\enemyconvertwarning.wav" />
+    <Content Include="Sounds\Aoe2\error.wav" />
+    <Content Include="Sounds\Aoe2\farm.wav" />
+    <Content Include="Sounds\Aoe2\farmbuild1.wav" />
+    <Content Include="Sounds\Aoe2\farmbuild2.wav" />
+    <Content Include="Sounds\Aoe2\farmexhausted.wav" />
+    <Content Include="Sounds\Aoe2\farming.wav" />
+    <Content Include="Sounds\Aoe2\femaledeath1.wav" />
+    <Content Include="Sounds\Aoe2\femaledeath2.wav" />
+    <Content Include="Sounds\Aoe2\femaledeath3.wav" />
+    <Content Include="Sounds\Aoe2\femaledeath4.wav" />
+    <Content Include="Sounds\Aoe2\femaledeath5.wav" />
+    <Content Include="Sounds\Aoe2\femaledeath6.wav" />
+    <Content Include="Sounds\Aoe2\fight1.wav" />
+    <Content Include="Sounds\Aoe2\fight2.wav" />
+    <Content Include="Sounds\Aoe2\fight3.wav" />
+    <Content Include="Sounds\Aoe2\fight4.wav" />
+    <Content Include="Sounds\Aoe2\fight5.wav" />
+    <Content Include="Sounds\Aoe2\fight6.wav" />
+    <Content Include="Sounds\Aoe2\fight7.wav" />
+    <Content Include="Sounds\Aoe2\fight8.wav" />
+    <Content Include="Sounds\Aoe2\fire.wav" />
+    <Content Include="Sounds\Aoe2\fireball1.wav" />
+    <Content Include="Sounds\Aoe2\fireball2.wav" />
+    <Content Include="Sounds\Aoe2\fireball3.wav" />
+    <Content Include="Sounds\Aoe2\fireball4.wav" />
+    <Content Include="Sounds\Aoe2\fireball5.wav" />
+    <Content Include="Sounds\Aoe2\fireball6.wav" />
+    <Content Include="Sounds\Aoe2\fireship1.wav" />
+    <Content Include="Sounds\Aoe2\fireship2.wav" />
+    <Content Include="Sounds\Aoe2\fireship3.wav" />
+    <Content Include="Sounds\Aoe2\fireship4.wav" />
+    <Content Include="Sounds\Aoe2\fishing.wav" />
+    <Content Include="Sounds\Aoe2\fishtrap.wav" />
+    <Content Include="Sounds\Aoe2\forage1.wav" />
+    <Content Include="Sounds\Aoe2\forage2.wav" />
+    <Content Include="Sounds\Aoe2\garrison.wav" />
+    <Content Include="Sounds\Aoe2\gate.wav" />
+    <Content Include="Sounds\Aoe2\gatelock.wav" />
+    <Content Include="Sounds\Aoe2\gateunlock.wav" />
+    <Content Include="Sounds\Aoe2\gatherpoint.wav" />
+    <Content Include="Sounds\Aoe2\gunfire.wav" />
+    <Content Include="Sounds\Aoe2\harp.wav" />
+    <Content Include="Sounds\Aoe2\herdablesfound.wav" />
+    <Content Include="Sounds\Aoe2\horns.wav" />
+    <Content Include="Sounds\Aoe2\horseambient1.wav" />
+    <Content Include="Sounds\Aoe2\horseambient2.wav" />
+    <Content Include="Sounds\Aoe2\horseambient3.wav" />
+    <Content Include="Sounds\Aoe2\horseambient4.wav" />
+    <Content Include="Sounds\Aoe2\horseattack1.wav" />
+    <Content Include="Sounds\Aoe2\horseattack2.wav" />
+    <Content Include="Sounds\Aoe2\horseattack3.wav" />
+    <Content Include="Sounds\Aoe2\horseflop1.wav" />
+    <Content Include="Sounds\Aoe2\horseflop2.wav" />
+    <Content Include="Sounds\Aoe2\horsemove.wav" />
+    <Content Include="Sounds\Aoe2\horseselect1.wav" />
+    <Content Include="Sounds\Aoe2\horseselect2.wav" />
+    <Content Include="Sounds\Aoe2\horseselect3.wav" />
+    <Content Include="Sounds\Aoe2\house.wav" />
+    <Content Include="Sounds\Aoe2\injury1.wav" />
+    <Content Include="Sounds\Aoe2\injury2.wav" />
+    <Content Include="Sounds\Aoe2\injury3.wav" />
+    <Content Include="Sounds\Aoe2\injury4.wav" />
+    <Content Include="Sounds\Aoe2\injury5.wav" />
+    <Content Include="Sounds\Aoe2\jaguarambient1.wav" />
+    <Content Include="Sounds\Aoe2\jaguarambient2.wav" />
+    <Content Include="Sounds\Aoe2\jaguarattack1.wav" />
+    <Content Include="Sounds\Aoe2\jaguarattack2.wav" />
+    <Content Include="Sounds\Aoe2\jaguarattack3.wav" />
+    <Content Include="Sounds\Aoe2\jungle1.wav" />
+    <Content Include="Sounds\Aoe2\jungle2.wav" />
+    <Content Include="Sounds\Aoe2\jungle3.wav" />
+    <Content Include="Sounds\Aoe2\jungle4.wav" />
+    <Content Include="Sounds\Aoe2\lumbercamp.wav" />
+    <Content Include="Sounds\Aoe2\maledeath1.wav" />
+    <Content Include="Sounds\Aoe2\maledeath2.wav" />
+    <Content Include="Sounds\Aoe2\maledeath3.wav" />
+    <Content Include="Sounds\Aoe2\maledeath4.wav" />
+    <Content Include="Sounds\Aoe2\maledeath5.wav" />
+    <Content Include="Sounds\Aoe2\maledeath6.wav" />
+    <Content Include="Sounds\Aoe2\mamelukethrow1.wav" />
+    <Content Include="Sounds\Aoe2\mamelukethrow2.wav" />
+    <Content Include="Sounds\Aoe2\mamelukethrow3.wav" />
+    <Content Include="Sounds\Aoe2\mangnelfire7.wav" />
+    <Content Include="Sounds\Aoe2\mangonelfire1.wav" />
+    <Content Include="Sounds\Aoe2\mangonelfire2.wav" />
+    <Content Include="Sounds\Aoe2\mangonelfire3.wav" />
+    <Content Include="Sounds\Aoe2\mangonelfire5.wav" />
+    <Content Include="Sounds\Aoe2\mangonelfire6.wav" />
+    <Content Include="Sounds\Aoe2\mangonelselect.wav" />
+    <Content Include="Sounds\Aoe2\market.wav" />
+    <Content Include="Sounds\Aoe2\marketbuy.wav" />
+    <Content Include="Sounds\Aoe2\marketsell.wav" />
+    <Content Include="Sounds\Aoe2\menuhover.wav" />
+    <Content Include="Sounds\Aoe2\menuselect.wav" />
+    <Content Include="Sounds\Aoe2\militarycreation.wav" />
+    <Content Include="Sounds\Aoe2\mill.wav" />
+    <Content Include="Sounds\Aoe2\millambient.wav" />
+    <Content Include="Sounds\Aoe2\millambient2.wav" />
+    <Content Include="Sounds\Aoe2\mine1.wav" />
+    <Content Include="Sounds\Aoe2\mine2.wav" />
+    <Content Include="Sounds\Aoe2\mine3.wav" />
+    <Content Include="Sounds\Aoe2\miningcamp.wav" />
+    <Content Include="Sounds\Aoe2\monastery.wav" />
+    <Content Include="Sounds\Aoe2\monkconvert.wav" />
+    <Content Include="Sounds\Aoe2\monkcreation.wav" />
+    <Content Include="Sounds\Aoe2\monkheal.wav" />
+    <Content Include="Sounds\Aoe2\objectivechange.wav" />
+    <Content Include="Sounds\Aoe2\playerdefeated.wav" />
+    <Content Include="Sounds\Aoe2\playerdefeated2.wav" />
+    <Content Include="Sounds\Aoe2\populationlimit.wav" />
+    <Content Include="Sounds\Aoe2\relic.wav" />
+    <Content Include="Sounds\Aoe2\relicscaptured.wav" />
+    <Content Include="Sounds\Aoe2\relicslost.wav" />
+    <Content Include="Sounds\Aoe2\research.wav" />
+    <Content Include="Sounds\Aoe2\scorpionfire1.wav" />
+    <Content Include="Sounds\Aoe2\scorpionfire2.wav" />
+    <Content Include="Sounds\Aoe2\scorpionfire3.wav" />
+    <Content Include="Sounds\Aoe2\scorpionfire4.wav" />
+    <Content Include="Sounds\Aoe2\scorpionselect.wav" />
+    <Content Include="Sounds\Aoe2\select1.wav" />
+    <Content Include="Sounds\Aoe2\select2.wav" />
+    <Content Include="Sounds\Aoe2\sheepambient1.wav" />
+    <Content Include="Sounds\Aoe2\sheepambient2.wav" />
+    <Content Include="Sounds\Aoe2\sheepambient3.wav" />
+    <Content Include="Sounds\Aoe2\sheepmove.wav" />
+    <Content Include="Sounds\Aoe2\sheepselect.wav" />
+    <Content Include="Sounds\Aoe2\shipcreation.wav" />
+    <Content Include="Sounds\Aoe2\shipmove1.wav" />
+    <Content Include="Sounds\Aoe2\shipmove2.wav" />
+    <Content Include="Sounds\Aoe2\shipmove3.wav" />
+    <Content Include="Sounds\Aoe2\shipselect.wav" />
+    <Content Include="Sounds\Aoe2\shipsink1.wav" />
+    <Content Include="Sounds\Aoe2\shipsink2.wav" />
+    <Content Include="Sounds\Aoe2\shipsink3.wav" />
+    <Content Include="Sounds\Aoe2\shipsink4.wav" />
+    <Content Include="Sounds\Aoe2\shipsink5.wav" />
+    <Content Include="Sounds\Aoe2\shore1.wav" />
+    <Content Include="Sounds\Aoe2\shore2.wav" />
+    <Content Include="Sounds\Aoe2\siegeweapondeath.wav" />
+    <Content Include="Sounds\Aoe2\siegeweaponmove.wav" />
+    <Content Include="Sounds\Aoe2\siegeworkshop.wav" />
+    <Content Include="Sounds\Aoe2\signalflare.wav" />
+    <Content Include="Sounds\Aoe2\splash1.wav" />
+    <Content Include="Sounds\Aoe2\splash2.wav" />
+    <Content Include="Sounds\Aoe2\splash3.wav" />
+    <Content Include="Sounds\Aoe2\stab1.wav" />
+    <Content Include="Sounds\Aoe2\stab2.wav" />
+    <Content Include="Sounds\Aoe2\stab3.wav" />
+    <Content Include="Sounds\Aoe2\stable.wav" />
+    <Content Include="Sounds\Aoe2\tf1.wav" />
+    <Content Include="Sounds\Aoe2\tf2.wav" />
+    <Content Include="Sounds\Aoe2\tf3.wav" />
+    <Content Include="Sounds\Aoe2\tf4.wav" />
+    <Content Include="Sounds\Aoe2\tf6.wav" />
+    <Content Include="Sounds\Aoe2\tf7.wav" />
+    <Content Include="Sounds\Aoe2\tf8.wav" />
+    <Content Include="Sounds\Aoe2\tower.wav" />
+    <Content Include="Sounds\Aoe2\townbell.wav" />
+    <Content Include="Sounds\Aoe2\townbell2.wav" />
+    <Content Include="Sounds\Aoe2\towncenter.wav" />
+    <Content Include="Sounds\Aoe2\tradecartmove.wav" />
+    <Content Include="Sounds\Aoe2\tradecartselect.wav" />
+    <Content Include="Sounds\Aoe2\tradecartstop.wav" />
+    <Content Include="Sounds\Aoe2\tradeworkshop.wav" />
+    <Content Include="Sounds\Aoe2\trebuchetattack3.wav" />
+    <Content Include="Sounds\Aoe2\trebuchetcreak.wav" />
+    <Content Include="Sounds\Aoe2\trebuchetcreak2.wav" />
+    <Content Include="Sounds\Aoe2\trebuchetcreak3.wav" />
+    <Content Include="Sounds\Aoe2\trebuchetfire1.wav" />
+    <Content Include="Sounds\Aoe2\trebuchetfire2.wav" />
+    <Content Include="Sounds\Aoe2\trebuchetmove.wav" />
+    <Content Include="Sounds\Aoe2\trebuchetselect.wav" />
+    <Content Include="Sounds\Aoe2\tribute.wav" />
+    <Content Include="Sounds\Aoe2\turkey1.wav" />
+    <Content Include="Sounds\Aoe2\turkey2.wav" />
+    <Content Include="Sounds\Aoe2\twang.wav" />
+    <Content Include="Sounds\Aoe2\ungarrison.wav" />
+    <Content Include="Sounds\Aoe2\university.wav" />
+    <Content Include="Sounds\Aoe2\victory.wav" />
+    <Content Include="Sounds\Aoe2\villagercreation.wav" />
+    <Content Include="Sounds\Aoe2\vmdlbongodrums.wav" />
+    <Content Include="Sounds\Aoe2\vmdlgoodidea.wav" />
+    <Content Include="Sounds\Aoe2\vmdlletssee.wav" />
+    <Content Include="Sounds\Aoe2\vmdlonmyhead.wav" />
+    <Content Include="Sounds\Aoe2\vmdlseethat.wav" />
+    <Content Include="Sounds\Aoe2\vmdlyeah.wav" />
+    <Content Include="Sounds\Aoe2\wall.wav" />
+    <Content Include="Sounds\Aoe2\warelephantselect.wav" />
+    <Content Include="Sounds\Aoe2\wargalleyfire1.wav" />
+    <Content Include="Sounds\Aoe2\wargalleyfire2.wav" />
+    <Content Include="Sounds\Aoe2\wargalleyfire3.wav" />
+    <Content Include="Sounds\Aoe2\wargalleyfire4.wav" />
+    <Content Include="Sounds\Aoe2\warp.wav" />
+    <Content Include="Sounds\Aoe2\warwagon.wav" />
+    <Content Include="Sounds\Aoe2\wave1.wav" />
+    <Content Include="Sounds\Aoe2\wave2.wav" />
+    <Content Include="Sounds\Aoe2\wave3.wav" />
+    <Content Include="Sounds\Aoe2\wave4.wav" />
+    <Content Include="Sounds\Aoe2\wave5.wav" />
+    <Content Include="Sounds\Aoe2\whoosh.wav" />
+    <Content Include="Sounds\Aoe2\wildanimalattackwarning.wav" />
+    <Content Include="Sounds\Aoe2\wildboarambient1.wav" />
+    <Content Include="Sounds\Aoe2\wildboarambient2.wav" />
+    <Content Include="Sounds\Aoe2\wildboarambient3.wav" />
+    <Content Include="Sounds\Aoe2\wildboarangry1.wav" />
+    <Content Include="Sounds\Aoe2\wildboarangry2.wav" />
+    <Content Include="Sounds\Aoe2\wildboarangry3.wav" />
+    <Content Include="Sounds\Aoe2\wildboaratack3.wav" />
+    <Content Include="Sounds\Aoe2\wildboarattack1.wav" />
+    <Content Include="Sounds\Aoe2\wildboarattack2.wav" />
+    <Content Include="Sounds\Aoe2\wildboardeath.wav" />
+    <Content Include="Sounds\Aoe2\wildboarflop.wav" />
+    <Content Include="Sounds\Aoe2\wind1.wav" />
+    <Content Include="Sounds\Aoe2\wind2.wav" />
+    <Content Include="Sounds\Aoe2\wind3.wav" />
+    <Content Include="Sounds\Aoe2\wolfambient1.wav" />
+    <Content Include="Sounds\Aoe2\wolfambient2.wav" />
+    <Content Include="Sounds\Aoe2\wolfambient3.wav" />
+    <Content Include="Sounds\Aoe2\wolfangry1.wav" />
+    <Content Include="Sounds\Aoe2\wolfangry2.wav" />
+    <Content Include="Sounds\Aoe2\wolfattack1.wav" />
+    <Content Include="Sounds\Aoe2\wolfattack2.wav" />
+    <Content Include="Sounds\Aoe2\wolfattack3.wav" />
+    <Content Include="Sounds\Aoe2\wonder.wav" />
+    <Content Include="Sounds\Aoe2\wonderconstruction.wav" />
+    <Content Include="Sounds\Aoe2\wonderdestruction.wav" />
+    <Content Include="Sounds\Aoe2\woodchop1.wav" />
+    <Content Include="Sounds\Aoe2\woodchop2.wav" />
+    <Content Include="Sounds\Aoe2\woodchop3.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\ABE_FALL_HIT.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\ABE_HIT_WALL.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\ABE_LAND.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\ABE_LAND2.Wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\ABE_ROLL_LOOP.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\ABE_STEP.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\ABE_TURN.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\BIRD_FLY_AWAY.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\BOMB_TIMER_GREEN.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\BOMB_TIMER_RED.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\IN_1.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\IN_10.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\IN_2.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\IN_3.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\IN_4.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\IN_5.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\IN_6.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\IN_7.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\IN_8.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\IN_9.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\LIFT_MOVE.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\MENU_ZAP.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\SLIG_BASH.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\SLIG_BULLET_COLLISION.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\SLIG_BULLET_COLLISION2.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\SLIG_BULLET_SHELS.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\SLIG_STEP.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\SLIG_TURN.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\SLOG_ATTACK.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\SLOG_DIE.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\SLOG_GROWL.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\SLOG_SLEEP_SNORE.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\SLOG_SLEEP_SNORE2.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\ZAP_BACKGROUND.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\ZAP_KILL.wav" />
+    <Content Include="Sounds\Sound Rips Pack 1\ZAP_LOUD.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\NAudio.Lame.1.0.9\build\NAudio.Lame.targets" Condition="Exists('..\packages\NAudio.Lame.1.0.9\build\NAudio.Lame.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NAudio.Lame.1.0.9\build\NAudio.Lame.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NAudio.Lame.1.0.9\build\NAudio.Lame.targets'))" />
+  </Target>
+</Project>
